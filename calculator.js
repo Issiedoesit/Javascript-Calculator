@@ -71,7 +71,7 @@ while (true){
         var minus = parseFloat(no_one) - parseFloat(no_two);
         var minus_round = round(minus, 2);
         alert(no_one + ' '+ '-'+ ' ' + no_two + ' ' + '=' + ' ' + minus_round + '\n' + '\n' + 'Unrounded Answer is' + ' '+ minus);
-    }else if(operation = 3){
+    }else if(operation == 3){
         var times = parseFloat(no_one) * parseFloat(no_two);
         var times_round = round(times, 2);
         alert(no_one + ' '+ '*'+ ' ' + no_two + ' ' + '=' + ' ' + times_round + '\n' + '\n' + 'Unrounded Answer is' + ' '+ times);
