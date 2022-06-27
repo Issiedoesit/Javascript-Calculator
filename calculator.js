@@ -1,10 +1,10 @@
-outerloop:
+outerLoop:
 
 while (true){
     while (true){
         var operation = prompt('What would you like to perform today: \r\n \r\n1: Addition \r\n2: Subtraction \r\n3: Multiplication \r\n4: Division \r\n \r\nEnter the number beside the operation you wish to perform');
         if (operation === null){
-            break outerloop
+            break outerLoop
         }
         var num = /\b[1234]\b/.test(operation);
         var symbol = /[^a-zA-Z0-9]/g.test(operation);
@@ -33,7 +33,7 @@ while (true){
     while (true){
         var no_one = prompt('Enter first number: ');
         if (no_one === null){
-            break outerloop
+            break outerLoop
         }
         try {
             if (no_one == '') throw "nothing. Please try again";
@@ -46,9 +46,24 @@ while (true){
     }
     
     while (true){
-        var no_two = prompt('Enter second number: ');
+        switch(operation){
+            case '1':
+                operationVal = '+'
+                break
+            case '2':
+                operationVal = '-'
+                break
+            case '3':
+                operationVal = '*'
+                break
+            case '4':
+                operationVal = '/'
+                break
+
+        }
+        var no_two = prompt(no_one +' '+ operationVal + '\n \nEnter second number: ');
         if (no_two === null){
-            break outerloop
+            break outerLoop
         }
         try {
             if (no_two == '') throw "nothing. Please try again";
@@ -65,8 +80,7 @@ while (true){
     if (operation == 1){
         var sum = parseFloat(no_one) + parseFloat(no_two);
         sum_round = round(sum, 2);
-        alert(no_one + ' '+ '+'+ ' ' + no_two + ' ' + '=' + ' ' + sum_round + '\n' + '\n' + 'Unrounded Answer is' + ' '+ sum);
-        
+        alert(no_one + ' '+ '+'+ ' ' + no_two + ' ' + '=' + ' ' + sum_round + '\n' + '\n' + 'Unrounded Answer is' + ' '+ sum);  
     }else if (operation == 2){
         var minus = parseFloat(no_one) - parseFloat(no_two);
         var minus_round = round(minus, 2);
