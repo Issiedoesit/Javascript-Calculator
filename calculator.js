@@ -16,14 +16,14 @@ while (true){
         return Math.round(n)/p;
         }
         try {
-            if (operation == '') throw "an empty operator. Please try again"
-            if (letter == true) throw "a letter. Please try again"
-            if (whitespace == true) throw "whitespace"
-            if (!(num == true)) throw "a value outside the options. Please try again"
-            if (symbol == true) throw "a symbol. Please try again."
+            if (operation == '') throw "an empty operator. Please try again";
+            if (letter == true) throw "a letter. Please try again";
+            if (whitespace == true) throw "whitespace";
+            if (!(num == true)) throw "a value outside the options. Please try again";
+            if (symbol == true) throw "a symbol. Please try again.";
             if (num == true) break
         } catch (error) {
-            alert('You entered' + ' ' + error)
+            alert('You entered' + ' ' + error);
         }
         continue
     
@@ -33,7 +33,8 @@ while (true){
     while (true){
         var no_one = prompt('Enter first number: ');
         if (no_one === null){
-            break outerLoop
+            alert('You are exiting the calculator. \n\nRefresh the page to use again.');
+            break outerLoop;
         }
         try {
             if (no_one == '') throw "nothing. Please try again";
@@ -48,22 +49,22 @@ while (true){
     while (true){
         switch(operation){
             case '1':
-                operationVal = '+'
+                operationVal = '+';
                 break
             case '2':
-                operationVal = '-'
+                operationVal = '-';
                 break
             case '3':
-                operationVal = '*'
+                operationVal = '*';
                 break
             case '4':
-                operationVal = '/'
+                operationVal = '/';
                 break
 
         }
         var no_two = prompt(no_one +' '+ operationVal + '\n \nEnter second number: ');
         if (no_two === null){
-            break outerLoop
+            break outerLoop;
         }
         try {
             if (no_two == '') throw "nothing. Please try again";
